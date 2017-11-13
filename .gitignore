@@ -1,0 +1,14 @@
+BACKUP/
+*.tlog
+*.suo
+*.pdb
+*.obj
+*.idb
+*.log
+BFS_PROJECT_SPO/x64/Debug/
+BFS_PROJECT_SPO/Debug/
+AITasks/Debug/
+cordova/
+Snap.svg-0.5.1/
+Jupyter Notebook/data/
+GO/
