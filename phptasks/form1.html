@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Божидар Димов, ФН:81112, домашно 2</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <style>
+    .margin {
+      margin-top: 1em;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="form1.php" method="POST">
+    <div class="input-group col-sm-2 col-sm-offset-1 margin">
+      <span>Име на предмета</span>
+      <input type="text" maxlength="150" name="courseName" class="form-control input-xs" />
+    </div>
+    <div class="input-group col-sm-2 col-sm-offset-1 margin">
+      <span>Преподавател</span>
+      <input type="text" maxlength="200" name="lecturerName" class="form-control input-xs" />
+    </div>
+    <div class="input-group col-sm-2 col-sm-offset-1 margin">
+      <span>Описание</span>
+      <textarea maxlength="10" name="description" class="form-control input-xs"></textarea>
+    </div>
+    <div class="input-group col-sm-2 col-sm-offset-1 margin">
+      <span>Група</span>
+      <select name="group" class="form-control input-xs">
+        <option value="1">М</option>
+        <option value="2">ПМ</option>
+        <option value="3">ОКН</option>
+        <option value="4">ЯКН</option>
+      </select>
+    </div>
+    <div class="input-group col-sm-2 col-sm-offset-1 margin">
+      <span>Кредити</span>
+      <input type="number" name="credits" class="form-control input-xs" />
+    </div>
+    <div class="input-group col-sm-2 col-sm-offset-1 margin">
+      <input type="submit" class="btn" value="Изпрати" />
+    </div>
+  </form>
+</body>
+
+</html>

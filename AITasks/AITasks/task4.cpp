@@ -22,12 +22,12 @@ const std::vector<int> values = { 150,35,200,160,60,45,60,40,30,10,70,30,15,10,4
 // hyper-parameters
 #define ITEMS_COUNT 24
 #define TARGET_WEIGHT 5000
-#define GENERATIONS_COUNT 10000
+#define GENERATIONS_COUNT 1000
 #define GENERATION_SIZE 40
-#define CROSSOVER_SIZE 15
+#define CROSSOVER_SIZE 10
 #define CROSSOVER_MASK "110111000000000111101000"
-#define MUTATION_COEFF 4
-#define MUTATION_MASK "001000010010100000000000"
+#define MUTATION_COEFF 6
+#define MUTATION_MASK "111111111111111111111111"
 
 
 typedef std::bitset<ITEMS_COUNT> Individual;
@@ -85,10 +85,8 @@ Generation crossover(Generation& gen) {
 
 void mutate(Generation& gen) {
 	for (int i = 0; i < gen.size(); i++) {
-		if (rand() % (int)(gen.size() / MUTATION_COEFF) == 0) {
-			for (int j = 0; j < ITEMS_COUNT; j++) {
-				if (MUTATION_MASK[j] == '1') gen[i][j] = gen[i][j] ? false : true;
-			}
+		for (int j = 0; j < ITEMS_COUNT; j++) {
+			if (MUTATION_MASK[j] == '1' && rand() % MUTATION_COEFF == 0) gen[i][j] = gen[i][j] ? false : true;
 		}
 	}
 }
@@ -126,7 +124,7 @@ void print_best_individual(Generation& gen) {
 void genetic_backpack() {
 	srand(time(0));
 	Generation gen;
-
+	auto t1 = clock();
 	for (int i = 0; i < GENERATION_SIZE; i++) {
 		gen.push_back(Individual(rand() % (unsigned long)pow(2, 24)));
 	}
@@ -146,6 +144,8 @@ void genetic_backpack() {
 	std::cout << "Last generation\n";
 	//print_gen(gen);
 	print_best_individual(gen);
+	auto t2 = clock();
+	std::cout << "\nTime elapsed: " << t2 - t1 << "ms ("<<(double)(t2 - t1) / (1000*60)<<"min)";
 }
 
 //int main() {
