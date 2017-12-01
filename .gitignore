@@ -2,3 +2,11 @@ AudioKruc/
 cordova/
 System Volume Information/
 .VC.db
+
+AITasks/\.vs/
+
+AITasks/AITasks/\.vscode/
+
+*.user
+
+*.db
