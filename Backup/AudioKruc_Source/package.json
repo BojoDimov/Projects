@@ -1,0 +1,31 @@
+{
+  "name": "AudioKruc",
+  "version": "1.0.0",
+  "description": "for `krucing` audio from video files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BojoDimov/AudioKruc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BojoDimov/AudioKruc/issues"
+  },
+  "homepage": "https://github.com/BojoDimov/AudioKruc#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "request": "^2.81.0",
+    "response": "^0.18.0",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.12",
+    "ytdl-core": "^0.14.4"
+  }
+}
