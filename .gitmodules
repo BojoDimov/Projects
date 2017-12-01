@@ -1,0 +1,10 @@
+[submodule "ML-with-Python"]
+	url = https://github.com/BojoDimov/ML-with-Python
+[submodule "DoubleTapedAutomata"]
+	url = https://github.com/BojoDimov/DoubleTapedAutomata
+[submodule "FiniteAutomataAppliances"]
+	url = https://github.com/BojoDimov/FiniteAutomataAppliances
+[submodule "NodeJsParallelCalculation"]
+	url = https://github.com/BojoDimov/NodeJsParallelCalculation
+[submodule "Xonix-Game"]
+	url = https://github.com/BojoDimov/Xonix-Game
